@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 
 // Sample data for tasks (you can fetch this from an API)
@@ -10,7 +10,7 @@ const sampleTasks = [
 
 function Tasks() {
   const [viewMode, setViewMode] = useState<'card' | 'list'>('card');
-  const [tasks, setTasks] = useState(sampleTasks);
+  const [tasks] = useState(sampleTasks);
 
   return (
     <div className="p-6">
