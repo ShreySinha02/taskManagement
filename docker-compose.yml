@@ -10,8 +10,6 @@ services:
       - backend
     environment:
       - VITE_API_URL=http://172.27.0.2:8001
-    networks:
-      - net1
     # links:
     #   - backend
     #   - frontend
@@ -22,8 +20,6 @@ services:
       - "8000:8000"
     environment:
       - MONGO_URI=mongodb+srv://shrey:shrey@cluster0.bt3np.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-    networks:
-      - net1
     # links:
     #   - backend
     #   - frontend
