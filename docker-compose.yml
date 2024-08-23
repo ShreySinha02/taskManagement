@@ -28,7 +28,7 @@ services:
     #   - backend
     #   - frontend
   
-networks:
-  net1:
-    external: true
+# networks:
+#   net1:
+#     external: true
 
