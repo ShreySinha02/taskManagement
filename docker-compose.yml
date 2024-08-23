@@ -5,7 +5,7 @@ services:
     build: ./client
     container_name: frontend
     ports:
-      - "5173:5173"
+      - "5173:1234"
     depends_on:
       - backend
     environment:
