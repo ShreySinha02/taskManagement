@@ -26,7 +26,7 @@ function SideNavigation() {
         </li>
         <li>
           <Link
-            to="/createuser"
+            to="/app/createuser"
             className="block p-4 hover:bg-gray-700 transition-colors duration-300"
           >
             Create User

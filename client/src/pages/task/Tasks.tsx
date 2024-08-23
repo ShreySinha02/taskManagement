@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 
 // Sample data for tasks (you can fetch this from an API)
@@ -10,7 +10,7 @@ const sampleTasks = [
 
 function Tasks() {
   const [viewMode, setViewMode] = useState<'card' | 'list'>('card');
-  const [tasks] = useState(sampleTasks);
+  const [tasks, setTasks] = useState(sampleTasks);
 
   return (
     <div className="p-6">
@@ -30,7 +30,7 @@ function Tasks() {
             List View
           </button>
         </div>
-        <Link to="/create-task">
+        <Link to="/app/create-task">
           <button
             className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
           >
