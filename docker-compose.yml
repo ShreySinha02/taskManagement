@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend_01
+    container_name: frontend
+    ports:
+      - "1234:1234"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://172.27.0.2:8001
+    networks:
+      - net1
+    # links:
+    #   - backend
+    #   - frontend
+  backend:
+    build: ./backend_01
+    container_name: backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb+srv://shrey:shrey@cluster0.bt3np.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    networks:
+      - net1
+    # links:
+    #   - backend
+    #   - frontend
+  
+networks:
+  net1:
+    external: true
+
