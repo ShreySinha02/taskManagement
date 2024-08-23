@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import SideNavigation from './components/sidenavigation/SideNavigation';
+import React from 'react';
 
 function App() {
   return (
